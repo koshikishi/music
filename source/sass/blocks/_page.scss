@@ -1,0 +1,16 @@
+.page {
+  min-width: 320px;
+  margin: 0;
+  font: #{$fontSizeTextMobile}/#{$lineHeightTextMobile} $fontFamilyText;
+  color: $colorText;
+  background-color: $colorWhite;
+
+  @media (min-width: 768px) {
+    font-size: $fontSizeTextTablet;
+    line-height: $lineHeightTextDesktop;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: $fontSizeTextDesktop;
+  }
+}

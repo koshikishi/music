@@ -1,0 +1,12 @@
+.header {
+  @media (min-width: 1280px) {
+    background-color: rgba($colorBackgroundMenu, 0.1);
+  }
+}
+
+.header__menu {
+  @media (min-width: 1280px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

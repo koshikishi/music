@@ -14,3 +14,18 @@
     font-size: $fontSizeTextDesktop;
   }
 }
+
+
+.page__header {
+  top: 0;
+  right: 0;
+  left: 0;
+
+  .no-js & {
+    position: absolute;
+  }
+
+  .js & {
+    position: fixed;
+  }
+}

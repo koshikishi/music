@@ -1,0 +1,200 @@
+.button {
+  @extend %button;
+  width: 98px;
+  min-height: 28px;
+  padding: 10px 10px 9px;
+  text-transform: uppercase;
+  background: center / cover no-repeat;
+  border: none;
+
+  &--first {
+    color: $colorWhite;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/button_bg-01-mobile@1x.jpg");
+    }
+
+    .webp & {
+      background-image: url("../img/button_bg-01-mobile@1x.webp");
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/button_bg-01-mobile@2x.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/button_bg-01-mobile@2x.webp");
+      }
+    }
+  }
+
+  &--second {
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/button_bg-02-mobile@1x.jpg");
+    }
+
+    .webp & {
+      background-image: url("../img/button_bg-02-mobile@1x.webp");
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/button_bg-02-mobile@2x.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/button_bg-02-mobile@2x.webp");
+      }
+    }
+  }
+
+  &--third {
+    width: 92px;
+    min-height: 26px;
+    padding: 9px 9px 8px;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/button_bg-03-mobile@1x.png");
+    }
+
+    .webp & {
+      background-image: url("../img/button_bg-03-mobile@1x.webp");
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/button_bg-03-mobile@2x.png");
+      }
+
+      .webp & {
+        background-image: url("../img/button_bg-03-mobile@2x.webp");
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 147px;
+    min-height: 42px;
+    padding: 16px 15px 14px;
+
+    &--first {
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/button_bg-01-tablet@1x.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/button_bg-01-tablet@1x.webp");
+      }
+
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/button_bg-01-tablet@2x.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/button_bg-01-tablet@2x.webp");
+        }
+      }
+    }
+
+    &--second {
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/button_bg-02-tablet@1x.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/button_bg-02-tablet@1x.webp");
+      }
+
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/button_bg-02-tablet@2x.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/button_bg-02-tablet@2x.webp");
+        }
+      }
+    }
+
+    &--third {
+      width: 144px;
+      min-height: 40px;
+      padding: 14px;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/button_bg-03-tablet@1x.png");
+      }
+
+      .webp & {
+        background-image: url("../img/button_bg-03-tablet@1x.webp");
+      }
+
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/button_bg-03-tablet@2x.png");
+        }
+
+        .webp & {
+          background-image: url("../img/button_bg-03-tablet@2x.webp");
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    width: 196px;
+    min-height: 56px;
+    padding: 19px 19px 20px;
+
+    &--first {
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/button_bg-01-desktop.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/button_bg-01-desktop.webp");
+      }
+    }
+
+    &--second {
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/button_bg-02-desktop.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/button_bg-02-desktop.webp");
+      }
+    }
+
+    &--third {
+      width: 192px;
+      min-height: 53px;
+      padding: 17px 17px 18px;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/button_bg-03-desktop.png");
+      }
+
+      .webp & {
+        background-image: url("../img/button_bg-03-desktop.webp");
+      }
+    }
+  }
+}

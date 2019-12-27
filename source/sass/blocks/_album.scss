@@ -1,0 +1,103 @@
+.album {
+  @media (min-width: 1280px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.album__meta {
+  @media (max-width: 1279px) {
+    margin-bottom: 19px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 26px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    width: 502px;
+    margin-top: 14px;
+
+    .album:last-child & {
+      margin-top: 56px;
+    }
+  }
+}
+
+.album__date {
+  @extend %text-date;
+  margin-bottom: 3px;
+
+  @media (min-width: 1280px) {
+    margin-bottom: 6px;
+  }
+}
+
+.album__name {
+  @extend %text-name;
+  padding-top: 1px;
+
+  @media (min-width: 768px) {
+    padding-top: 3px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-bottom: 2px;
+  }
+}
+
+.album__content {
+  @media (min-width: 1280px) {
+    width: 673px;
+  }
+}
+
+.album__title {
+  @extend %subtitle;
+  margin-bottom: 10px;
+
+  .album:last-child & {
+    line-height: $lineHeightSubtitleLarge;
+  }
+
+  @media (min-width: 768px) {
+    margin-right: -10px;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-right: -25px;
+    margin-bottom: 13px;
+  }
+}
+
+.album__description {
+  @extend %text;
+  margin-bottom: 22px;
+  color: $colorTextLight;
+
+  @media (min-width: 768px) {
+    margin-bottom: 23px;
+  }
+
+  @media (max-width: 1279px) {
+    text-align: justify;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 26px;
+
+    .album:last-child & {
+      margin-bottom: 92px;
+    }
+  }
+}
+
+.album__button {
+  @media (max-width: 1279px) {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

@@ -15,7 +15,6 @@
   }
 }
 
-
 .page__header {
   top: 0;
   right: 0;
@@ -27,5 +26,17 @@
 
   .js & {
     position: fixed;
+  }
+}
+
+.page__hero {
+  margin-bottom: 11px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 53px;
   }
 }

@@ -12,3 +12,114 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+%container-narrow {
+  box-sizing: border-box;
+  min-width: 320px;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+%title {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  font: #{$fontSizeTitleMobile}/#{$lineHeightTitle} $fontFamilyTitle;
+  text-align: center;
+  color: $colorBlack;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacingLarge;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: $colorBlack;
+  }
+
+  span {
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    font-size: $fontSizeTitleTablet;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: $fontSizeTitleDesktop;
+  }
+}
+
+%subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: $fontWeightNormal;
+  font-size: $fontSizeSubtitleMobile;
+  line-height: $lineHeightSubtitle;
+  color: $colorBlack;
+  letter-spacing: $letterSpacing;
+
+  @media (min-width: 768px) {
+    font-size: $fontSizeSubtitleTablet;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: $fontSizeSubtitleDesktop;
+  }
+}
+
+%text {
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: $letterSpacing;
+}
+
+%text-lead {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  letter-spacing: $letterSpacingLarge;
+}
+
+%text-date {
+  display: block;
+  font-weight: $fontWeightBold;
+  color: rgba($colorBlack, 0.65);
+}
+
+%text-name {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: $fontWeightBold;
+  color: $colorBlack;
+  text-transform: uppercase;
+  border-top: 1px solid $colorBlack;
+}
+
+%button {
+  display: inline-block;
+  box-sizing: border-box;
+  font-weight: $fontWeightBold;
+  line-height: $lineHeightNormal;
+  vertical-align: middle;
+  text-align: center;
+  color: $colorBlack;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}

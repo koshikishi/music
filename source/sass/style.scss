@@ -14,7 +14,7 @@
 @import "misc/animations";
 
 // Подключаем основные стили
-@import "misc/base", "blocks/page", "blocks/button";
+@import "misc/base", "blocks/page", "blocks/button", "blocks/button-second";
 
 // Подключаем стили шапки
 @import "blocks/header", "blocks/menu";
@@ -24,3 +24,6 @@
 
 // Подключаем стили блока дискографии
 @import "blocks/discography", "blocks/album";
+
+// Подключаем стили блока туров
+@import "blocks/tours", "blocks/tour";

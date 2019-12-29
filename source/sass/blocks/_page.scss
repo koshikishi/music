@@ -40,3 +40,15 @@
     margin-bottom: 53px;
   }
 }
+
+.page__discography {
+  margin-bottom: 49px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 154px;
+  }
+}

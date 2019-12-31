@@ -19,6 +19,7 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 1;
 
   .no-js & {
     position: absolute;
@@ -50,5 +51,17 @@
 
   @media (min-width: 1280px) {
     margin-bottom: 154px;
+  }
+}
+
+.page__tours {
+  margin-bottom: 53px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 150px;
   }
 }

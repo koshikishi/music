@@ -78,3 +78,27 @@
     margin-bottom: 165px;
   }
 }
+
+.page__tracks {
+  margin-bottom: 9px;
+
+  @supports (display: grid) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 128px;
+
+    @supports (display: grid) {
+      margin-bottom: 141px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 94px;
+
+    @supports (display: grid) {
+      margin-bottom: 122px;
+    }
+  }
+}

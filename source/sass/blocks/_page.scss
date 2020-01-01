@@ -68,4 +68,13 @@
 
 .page__slider {
   position: relative;
+  margin-bottom: 28px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 165px;
+  }
 }

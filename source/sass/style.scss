@@ -33,3 +33,6 @@
 
 // Подключаем стили блока слайдера
 @import "blocks/slider";
+
+// Подключаем стили блока последних треков
+@import "blocks/tracks", "blocks/track";

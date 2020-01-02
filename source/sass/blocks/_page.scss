@@ -102,3 +102,15 @@
     }
   }
 }
+
+.page__events {
+  margin-bottom: 5px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 145px;
+  }
+}

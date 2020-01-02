@@ -114,3 +114,15 @@
     margin-bottom: 145px;
   }
 }
+
+.page__history {
+  margin-bottom: 39px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 119px;
+  }
+}

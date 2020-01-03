@@ -1,0 +1,172 @@
+.track {
+  box-sizing: border-box;
+  width: 192px;
+  min-height: 211px;
+  padding: 13px 18px;
+  overflow: hidden;
+  background: center / 192px auto no-repeat $colorBackground;
+  counter-increment: number;
+
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/track_0#{$i}-bg-mobile@1x.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/track_0#{$i}-bg-mobile@1x.webp");
+      }
+
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/track_0#{$i}-bg-mobile@2x.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/track_0#{$i}-bg-mobile@2x.webp");
+        }
+      }
+    }
+  }
+
+  &::after {
+    content: counter(number, decimal-leading-zero);
+    position: absolute;
+    right: 4px;
+    bottom: -15px;
+    font-weight: $fontWeightBold;
+    font-size: $fontSizeTextHugeMobile;
+    line-height: $lineHeightNormal;
+    color: rgba($colorBlack, 0.17);
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 768px) {
+    width: 292px;
+    min-height: 321px;
+    padding: 21px 27px;
+    background-size: 292px auto;
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/track_0#{$i}-bg-tablet@1x.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/track_0#{$i}-bg-tablet@1x.webp");
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+          .no-js &,
+          .no-webp & {
+            background-image: url("../img/track_0#{$i}-bg-tablet@2x.jpg");
+          }
+
+          .webp & {
+            background-image: url("../img/track_0#{$i}-bg-tablet@2x.webp");
+          }
+        }
+      }
+    }
+
+    &::after {
+      right: 10px;
+      bottom: -23px;
+      font-size: $fontSizeTextHugeTablet;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    width: 384px;
+    min-height: 422px;
+    padding: 28px 35px;
+    background-size: 384px auto;
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/track_0#{$i}-bg-desktop.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/track_0#{$i}-bg-desktop.webp");
+        }
+      }
+    }
+
+    &::after {
+      right: 8px;
+      bottom: -31px;
+      font-size: $fontSizeTextHugeDesktop;
+    }
+  }
+}
+
+.track__meta {
+  margin-bottom: 19px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 37px;
+  }
+}
+
+.track__date {
+  @extend %text-date;
+  margin-bottom: 3px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 5px;
+  }
+}
+
+.track__album {
+  @extend %text-name;
+  padding-top: 1px;
+  color: $colorWhite;
+
+  @media (min-width: 768px) {
+    padding-top: 2px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-top: 3px;
+  }
+}
+
+.track__title {
+  @extend %subtitle;
+  margin-bottom: 27px;
+
+  .track:first-child & {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 42px;
+
+    .track:first-child & {
+      margin-bottom: 26px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 55px;
+
+    .track:first-child & {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.track__description {
+  @extend %text;
+}

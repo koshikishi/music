@@ -1,0 +1,222 @@
+.discography {
+  @extend %container-wide;
+  padding-bottom: 224px;
+  background: bottom / 769px auto no-repeat;
+
+  .no-js &,
+  .no-webp & {
+    background-image: url("../img/discography_bg-mobile@1x.jpg");
+  }
+
+  .webp & {
+    background-image: url("../img/discography_bg-mobile@1x.webp");
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/discography_bg-mobile@2x.jpg");
+    }
+
+    .webp & {
+      background-image: url("../img/discography_bg-mobile@2x.webp");
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-bottom: 296px;
+    background-size: 1127px auto;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/discography_bg-tablet@1x.jpg");
+    }
+
+    .webp & {
+      background-image: url("../img/discography_bg-tablet@1x.webp");
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/discography_bg-tablet@2x.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/discography_bg-tablet@2x.webp");
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    padding-bottom: 452px;
+    background-size: 2000px auto;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/discography_bg-desktop.jpg");
+    }
+
+    .webp & {
+      background-image: url("../img/discography_bg-desktop.webp");
+    }
+  }
+}
+
+.discography__heading {
+  @extend %container-narrow;
+  display: flex;
+  flex-direction: column;
+  max-width: 615px;
+  margin-bottom: 50px;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  @media (min-width: 768px) {
+    max-width: 820px;
+    margin-bottom: 78px;
+    padding-right: 102px;
+    padding-left: 116px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 149px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.discography__title {
+  @extend %title;
+  align-self: center;
+  margin-bottom: 18px;
+  padding-right: 38px;
+  padding-left: 38px;
+
+  @supports (background-clip: text) {
+    span {
+      color: transparent;
+      background: 1px -128px / 274px auto no-repeat $colorBlack;
+      background-clip: text;
+
+      .no-js &,
+      .no-webp & {
+        background-image: url("../img/discography_title-bg-mobile@1x.jpg");
+      }
+
+      .webp & {
+        background-image: url("../img/discography_title-bg-mobile@1x.webp");
+      }
+
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/discography_title-bg-mobile@2x.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/discography_title-bg-mobile@2x.webp");
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 25px;
+    padding-right: 57px;
+    padding-left: 57px;
+
+    @supports (background-clip: text) {
+      span {
+        background-position: 2px -190px;
+        background-size: 503px auto;
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/discography_title-bg-tablet@1x.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/discography_title-bg-tablet@1x.webp");
+        }
+
+        @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+          .no-js &,
+          .no-webp & {
+            background-image: url("../img/discography_title-bg-tablet@2x.jpg");
+          }
+
+          .webp & {
+            background-image: url("../img/discography_title-bg-tablet@2x.webp");
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 35px;
+    padding-right: 77px;
+    padding-left: 77px;
+
+    @supports (background-clip: text) {
+      span {
+        background-position: 3px -256px;
+        background-size: 896px auto;
+
+        .no-js &,
+        .no-webp & {
+          background-image: url("../img/discography_title-bg-desktop.jpg");
+        }
+
+        .webp & {
+          background-image: url("../img/discography_title-bg-desktop.webp");
+        }
+      }
+    }
+  }
+}
+
+.discography__lead {
+  @extend %text-lead;
+}
+
+.discography__list {
+  @extend %container-narrow;
+  padding-right: 24px;
+  padding-left: 26px;
+
+  @media (max-width: 767px) {
+    max-width: 572px;
+  }
+
+  @media (min-width: 768px) {
+    padding-right: 138px;
+    padding-left: 124px;
+
+    @media (max-width: 1279px) {
+      max-width: 935px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+.discography__item {
+  margin-bottom: 48px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 98px;
+  }
+}

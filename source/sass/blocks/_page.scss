@@ -1,0 +1,121 @@
+.page {
+  min-width: 320px;
+  margin: 0;
+  font: #{$fontSizeTextMobile}/#{$lineHeightTextMobile} $fontFamilyText;
+  color: $colorText;
+  background-color: $colorWhite;
+
+  @media (min-width: 768px) {
+    font-size: $fontSizeTextTablet;
+    line-height: $lineHeightTextDesktop;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: $fontSizeTextDesktop;
+  }
+}
+
+.page__header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.page__hero {
+  margin-bottom: 11px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 53px;
+  }
+}
+
+.page__discography {
+  margin-bottom: 49px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 154px;
+  }
+}
+
+.page__tours {
+  margin-bottom: 53px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 150px;
+  }
+}
+
+.page__slider {
+  position: relative;
+  margin-bottom: 28px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 165px;
+  }
+}
+
+.page__tracks {
+  margin-bottom: 9px;
+
+  @supports (display: grid) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 128px;
+
+    @supports (display: grid) {
+      margin-bottom: 141px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 94px;
+
+    @supports (display: grid) {
+      margin-bottom: 122px;
+    }
+  }
+}
+
+.page__events {
+  margin-bottom: 5px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 145px;
+  }
+}
+
+.page__history {
+  margin-bottom: 39px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-bottom: 119px;
+  }
+}

@@ -10,5 +10,38 @@
 // Подключаем шаблонные и вспомогательные классы
 @import "misc/extends", "blocks/visually-hidden";
 
+// Подключаем анимацию
+@import "misc/animations";
+
 // Подключаем основные стили
-@import "misc/base";
+@import "misc/base", "blocks/page", "blocks/button", "blocks/button-second";
+
+// Подключаем стили шапки
+@import "blocks/header", "blocks/menu";
+
+// Подключаем стили hero-блока
+@import "blocks/hero";
+
+// Подключаем стили блока дискографии
+@import "blocks/discography", "blocks/album";
+
+// Подключаем стили блока туров
+@import "blocks/tours", "blocks/tour";
+
+// Подключаем стили блока композиций
+@import "blocks/compositions", "blocks/clip";
+
+// Подключаем стили блока слайдера
+@import "blocks/slider";
+
+// Подключаем стили блока последних треков
+@import "blocks/tracks", "blocks/track";
+
+// Подключаем стили блока мероприятий
+@import "blocks/events";
+
+// Подключаем стили блока истории
+@import "blocks/history";
+
+// Подключаем стили блока контактов
+@import "blocks/contact";

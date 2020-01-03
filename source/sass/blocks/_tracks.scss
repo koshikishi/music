@@ -1,0 +1,69 @@
+.tracks {
+  @extend %container-wide;
+}
+
+.tracks__list {
+  @extend %container-narrow;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 10px;
+  counter-reset: number;
+
+  @supports (display: grid) {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fill, 192px);
+    padding-right: 13px;
+    padding-left: 23px;
+  }
+
+  @media (min-width: 768px) {
+    padding-right: 28px;
+    padding-left: 20px;
+
+    @supports (display: grid) {
+      gap: 13px 18px;
+      grid-template-columns: repeat(auto-fill, 292px);
+      padding-right: 37px;
+      padding-left: 29px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    padding-right: 10px;
+    padding-left: 10px;
+
+    @supports (display: grid) {
+      gap: 28px 24px;
+      grid-template-columns: repeat(auto-fill, 384px);
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+  }
+}
+
+.tracks__item {
+  position: relative;
+  margin-right: 13px;
+  margin-bottom: 26px;
+  margin-left: 13px;
+
+  @media (min-width: 768px) {
+    margin-right: 9px;
+    margin-bottom: 13px;
+    margin-left: 9px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-right: 12px;
+    margin-bottom: 28px;
+    margin-left: 12px;
+  }
+
+  @supports (display: grid) {
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}

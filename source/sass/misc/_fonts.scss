@@ -1,0 +1,10 @@
+// Подключаем шрифт Dosis
+@include font-face("Dosis", "Regular");
+
+// Подключаем шрифт Open Sans
+@include font-face("Open Sans", "Light", $fontWeightLight);
+@include font-face("Open Sans", "Regular");
+@include font-face("Open Sans", "Bold", $fontWeightBold);
+
+// Подключаем шрифт Myriad Pro
+@include font-face("Myriad Pro", "Regular", $woff2: false);

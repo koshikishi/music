@@ -29,5 +29,8 @@
     "imagemin-pngquant": "^8.0.0",
     "readable-stream": "^3.4.0",
     "scss-resets": "^0.5.2"
+  },
+  "dependencies": {
+    "flickity": "^2.2.1"
   }
 }

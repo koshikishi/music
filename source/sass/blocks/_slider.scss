@@ -79,11 +79,11 @@
 }
 
 .slider__item {
-  display: none;
+  display: block;
   box-sizing: border-box;
   width: 100%;
   min-height: 321px;
-  padding: 106px 35px 75px;
+  padding: 106px 35px 62px;
   background: calc(50% + 5px) 81px / 64px auto no-repeat;
 
   .no-js & {
@@ -99,20 +99,16 @@
     background-image: url("../img/slider_icon.webp");
   }
 
-  &--active {
-    display: block;
-  }
-
   @media (min-width: 768px) {
     min-height: 480px;
-    padding: 172px 40px 130px;
+    padding: 172px 40px 111px;
     background-position: calc(50% + 4px) 120px;
     background-size: 96px auto;
   }
 
   @media (min-width: 1280px) {
     min-height: 642px;
-    padding: 231px 170px 173px;
+    padding: 231px 170px 147px;
     background-position: center 161px;
     background-size: 128px auto;
   }

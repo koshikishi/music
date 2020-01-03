@@ -118,6 +118,67 @@ for (var k = 0; k < videos.length; k++) {
   addVideosControlsHandler(videos[k], videosPlayPayse[k], videosProgress[k], videosCurrentTime[k], videosDuration[k]);
 }
 
+// Оживление слайдера событий
+var slider = new Flickity('.slider__list', {
+  wrapAround: true,
+  prevNextButtons: false,
+  pageDots: false
+});
+
+// Добавление кастомных элементов управления
+var sliderDotsGroup = document.querySelector('.slider__dots');
+var sliderDots = window.fizzyUIUtils.makeArray(sliderDotsGroup.children);
+
+slider.on('select', function () {
+  var previousSelectedDot = document.querySelector('.slider__dot--active');
+  var selectedDot = sliderDotsGroup.children[slider.selectedIndex];
+
+  previousSelectedDot.classList.remove('slider__dot--active');
+  selectedDot.classList.add('slider__dot--active');
+});
+
+sliderDotsGroup.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  if (!matchesSelector(evt.target, '.slider__dot')) {
+    return;
+  }
+
+  var index = sliderDots.indexOf(evt.target);
+  slider.select(index);
+});
+
+// Добавление кастомных стрелок
+var sliderPrevButton = document.querySelector('.slider__button--prev');
+var sliderNextButton = document.querySelector('.slider__button--next');
+
+sliderPrevButton.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  slider.previous();
+});
+
+sliderNextButton.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  slider.next();
+});
+
+// Оживление слайдера истории
+var historySlider = new Flickity('.history__slider', {
+  wrapAround: true,
+  initialIndex: 2,
+  percentPosition: false,
+  prevNextButtons: false,
+  pageDots: false,
+  on: {
+    ready: function () {
+      this.reposition();
+    }
+  }
+});
+
+historySlider.on('change', function () {
+  historySlider.reposition();
+});
+
 // Появление и закрытие мобильного меню
 function menuToggle() {
   if (menu.classList.contains('menu--shown')) {

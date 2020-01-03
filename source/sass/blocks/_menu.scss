@@ -31,7 +31,7 @@
     margin-top: 10px;
     margin-bottom: 35px;
 
-    .menu--shown &,
+    &--shown,
     .menu:target & {
       display: block;
       animation: 1s menu-show;

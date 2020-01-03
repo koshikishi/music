@@ -56,9 +56,75 @@ window.onscroll = function () {
   }
 };
 
+// Оживление видео
+var videos = document.querySelectorAll('.clip__video video');
+var videosPlayPayse = document.querySelectorAll('.clip__playpause');
+var videosProgress = document.querySelectorAll('.clip__progress');
+var videosCurrentTime = document.querySelectorAll('.clip__time-current');
+var videosDuration = document.querySelectorAll('.clip__time-full');
+
+// Переключение состояния видео
+var addVideosStateHandler = function (video) {
+  video.addEventListener('play', function () {
+    videoStateChange(video);
+  });
+
+  video.addEventListener('pause', function () {
+    videoStateChange(video);
+  });
+};
+
+// Подключение кастомных элементов управления для видео
+var addVideosControlsHandler = function (video, playpause, progress, current, duration) {
+  video.addEventListener('loadedmetadata', function () {
+    progress.setAttribute('max', video.duration);
+    duration.textContent = timeMinSec(video.duration);
+  });
+
+  video.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    videoPlayPause(video);
+  });
+
+  playpause.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    videoPlayPause(video);
+  });
+
+  video.addEventListener('timeupdate', function () {
+    if (!progress.getAttribute('max')) {
+      progress.setAttribute('max', video.duration);
+    }
+
+    progress.value = video.currentTime;
+    current.textContent = timeMinSec(video.currentTime);
+  });
+
+  if (window.navigator.userAgent.indexOf('MSIE ') > 0 || window.navigator.userAgent.indexOf('Trident/') > 0) {
+    progress.addEventListener('change', function () {
+      video.currentTime = progress.value;
+    });
+  } else {
+    progress.addEventListener('input', function () {
+      video.currentTime = progress.value;
+    });
+  }
+};
+
+for (var k = 0; k < videos.length; k++) {
+  videos[k].controls = false;
+
+  addVideosStateHandler(videos[k]);
+  addVideosControlsHandler(videos[k], videosPlayPayse[k], videosProgress[k], videosCurrentTime[k], videosDuration[k]);
+}
+
 // Появление и закрытие мобильного меню
 function menuToggle() {
-  menu.classList.contains('menu--shown') ? menuClose() : menuOpen();
+  if (menu.classList.contains('menu--shown')) {
+    menuClose();
+  } else {
+    menuOpen();
+  }
 }
 
 // Появление мобильного меню
@@ -99,4 +165,30 @@ function isSectionInView(elmnt) {
 function menuLinkActive(n) {
   menuList.querySelector('.menu__link--active').classList.remove('menu__link--active');
   menuLinks[n].classList.add('menu__link--active');
+}
+
+// Переключение состояния видео
+function videoStateChange(video) {
+  if (video.paused || video.ended) {
+    video.setAttribute('data-state', 'pause');
+  } else {
+    video.setAttribute('data-state', 'play');
+  }
+}
+
+// Проигрывание и остановка видео
+function videoPlayPause(video) {
+  if (video.paused || video.ended) {
+    video.play();
+  } else {
+    video.pause();
+  }
+}
+
+// Преобразование времени в формат mm:ss
+function timeMinSec(time) {
+  var seconds = Math.floor(time) % 60;
+  var minutes = Math.floor(time / 60);
+
+  return minutes + ':' + (seconds > 9 ? seconds : '0' + seconds);
 }

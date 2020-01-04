@@ -123,6 +123,12 @@
     display: flex;
     overflow: auto;
   }
+
+  @media (min-width: 1280px) {
+    max-width: 1792px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .history__slider-item {
